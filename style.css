@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  --color: #ff6f61;
+  --color2: #0a9396;
+  --color3: #FBC02D;
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: rgb(6, 6, 6);
+  font-size: 20px;
+
+}
+
+label {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: normal;
+}
+
+input {
+  margin: 50px 0 10px;
+  padding: 7px;
+  font-size: 20px;
+}
+
+.result {
+  margin: 10px 0 50px;
+  font-size: 26px;
+  color: rgb(8, 8, 8);
+  letter-spacing: 1px;
+  height: 1em;
+  font-weight: bold;
+}
+
+button {
+  width: 200px;
+  margin: 0 30px;
+  padding: 10px 30px;
+  background: none;
+  border: 2px solid var(--color3);
+  border-radius: 5px;
+  color: var(--color2);
+  font-size: 25px;
+  transition: color 0.3s, box-shadow 0.3s;
+  box-shadow: 5px 4px 10px var(--color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--color);
+  box-shadow: 5px 5px 10px var(--color);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  width: 200px;
+  margin: 0 30px;
+  padding: 10px 30px;
+  background: none;
+  border: 2px solid var(--color3);
+  border-radius: 5px;
+  color: var(--color2);
+  font-size: 25px;
+  transition: color 0.3s, box-shadow 0.3s;
+  box-shadow: 5px 4px 10px var(--color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: #0a9396;
+  display: block;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* Display the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/*  Media queries */
+@media screen and (max-width: 500px) {
+  label {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  button {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+}
